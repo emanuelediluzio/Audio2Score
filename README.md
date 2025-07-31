@@ -1,66 +1,95 @@
 # 🎼 Audio2Score
 
-Audio2Score è un'app per macOS che converte file audio `.mp3` o `.wav` in spartiti PDF/PNG per **pianoforte**, **violino** o **violoncello**.
+Audio2Score è un'applicazione per macOS che trascrive file audio (MP3/WAV) in spartiti musicali PDF/PNG per **pianoforte**, **violino** e **violoncello**.
 
-## 🚀 Come usare
+## 🚀 Funzionalità principali
+
+- 🎹 Riconoscimento strumenti (violino, piano, violoncello)
+- 🎼 Estrazione spartito in PDF + PNG
+- 🧠 Riconoscimento automatico della tonalità
+- ✨ Supporto a brani monofonici e polifonici
+- 🖱️ GUI drag & drop facile da usare
+
+---
+
+## 🛠️ Requisiti
+
+- macOS 11 o superiore
+- Python 3.9+
+- MuseScore 3/4 installato (per esportazione PDF)
+- `create-dmg` via Homebrew
+
+```bash
+brew install create-dmg
+```
+
+## 📦 Installazione
 
 ### 1. Clona il progetto
 
 ```bash
 git clone https://github.com/tuo-username/Audio2Score.git
 cd Audio2Score
-2. (Facoltativo) Genera l’icona .icns
-bash
-Copia
-Modifica
+```
+
+### 2. Installa le dipendenze
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. (Opzionale) Genera icona `.icns`
+
+```bash
 chmod +x png_to_icns.sh
 ./png_to_icns.sh icons/source_icon.png
-3. Costruisci l’app .app
-bash
-Copia
-Modifica
-pip install -r requirements.txt
+```
+
+### 4. Crea l'app `.app`
+
+```bash
 python3 setup.py py2app
-4. Crea il .dmg
-bash
-Copia
-Modifica
+```
+
+### 5. Crea il file `.dmg`
+
+```bash
 chmod +x create_dmg.sh
 ./create_dmg.sh
-Otterrai Audio2Score.dmg pronto per la distribuzione.
+```
 
-🔧 Requisiti
-Python 3.9+
-
-MuseScore 3 o 4 installato
-
-create-dmg installato (via brew install create-dmg)
-
-✨ Funzionalità
-🎹 Riconoscimento automatico strumenti e polifonia
-
-🎼 Estrazione PDF/PNG
-
-🎻 Supporto per violino, violoncello e pianoforte (con mani separate)
-
-🧠 Riconoscimento automatico tonalità
-
-📦 Impacchettamento in .app e .dmg pronti per distribuzione
-
-yaml
-Copia
-Modifica
+Otterrai `Audio2Score.dmg` pronto per distribuzione.
 
 ---
 
-## 🔹 6. `requirements.txt` (opzionale ma utile)
+## 📁 Struttura del progetto
 
-```txt
-music21
-basic_pitch
-pretty_midi
-librosa
-soundfile
-torch
-torchaudio
-py2app
+```
+Audio2Score/
+├── trascrizione_gui.py
+├── icons/
+│   ├── source_icon.svg/.png
+│   └── app.icns
+├── setup.py
+├── png_to_icns.sh
+├── create_dmg.sh
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🖼️ Icona
+
+Puoi fornire un file `source_icon.svg` nella cartella `icons/`, oppure usare uno PNG a 1024x1024. Lo script `png_to_icns.sh` si occuperà della conversione automatica.
+
+---
+
+## 📜 Licenza
+
+Distribuito sotto licenza MIT.
+
+---
+
+## 🇬🇧 English version?
+See [README_EN.md](README_EN.md) (in preparation)
