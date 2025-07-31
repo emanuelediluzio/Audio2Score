@@ -89,7 +89,4 @@ Puoi fornire un file `source_icon.svg` nella cartella `icons/`, oppure usare uno
 
 Distribuito sotto licenza MIT.
 
----
 
-## 🇬🇧 English version?
-See [README_EN.md](README_EN.md) (in preparation)
