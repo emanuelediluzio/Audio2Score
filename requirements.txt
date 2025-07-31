@@ -1,0 +1,9 @@
+music21
+basic-pitch
+torchaudio
+librosa
+soundfile
+tk
+pyobjc-framework-Cocoa
+pyobjc-framework-Quartz
+matplotlib
