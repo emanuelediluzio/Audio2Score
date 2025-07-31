@@ -28,7 +28,7 @@ brew install create-dmg
 ### 1. Clona il progetto
 
 ```bash
-git clone https://github.com/tuo-username/Audio2Score.git
+git clone https://github.com/emanuelediluzio/Audio2Score.git
 cd Audio2Score
 ```
 
